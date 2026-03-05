@@ -11,4 +11,4 @@ title: GameDo Studio
 
 ## Legal
 
-- [Privacy Policy — GravityShot](privacy-policy)
+- [Privacy Policy — GravityShot](gravityshot/privacy-policy)
