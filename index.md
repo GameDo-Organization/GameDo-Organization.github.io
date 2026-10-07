@@ -8,7 +8,7 @@ title: GameDo Studio
 ## Games
 
 - **GravityShot** — A gravity-based puzzle game for iOS and Android
-- **Swarm from Hypervoid 88** — A neon arcade bullet-hell for iOS and Android
+- **Swarm from Hypervoid 88** — A neon arcade bullet-hell for iOS and Android · [Press kit](swarmfromhypervoid88/presskit/)
 
 ## Legal
 
