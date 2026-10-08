@@ -138,6 +138,19 @@
   .yt { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden;
     border: 1px solid var(--line); box-shadow: 0 0 30px rgba(255, 78, 205, .18); background: #000; }
   .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vcar { display: flex; align-items: center; gap: 12px; }
+  .vcar .yt { flex: 1; min-width: 0; }
+  .varrow { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line);
+    background: rgba(255, 78, 205, .12); color: var(--text); font-size: 30px; line-height: 1; cursor: pointer; }
+  .varrow:hover { background: rgba(255, 78, 205, .3); }
+  .vthumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 14px 56px 0; }
+  .vthumb { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: var(--panel);
+    color: var(--muted); cursor: pointer; font: inherit; font-size: 14px; text-align: left; opacity: .7; transition: opacity .15s, border-color .15s; }
+  .vthumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .vthumb > span { display: block; padding: 6px 10px 8px; line-height: 1.25; }
+  .vthumb:hover { opacity: 1; }
+  .vthumb.on { opacity: 1; border-color: var(--pink); color: var(--text); }
+  @media (max-width: 600px) { .varrow { display: none; } .vthumbs { margin: 12px 0 0; } }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 15px; border-top: 1px solid rgba(255, 255, 255, .06); }
 
   /* language switch: [data-lang] blocks */
@@ -286,12 +299,43 @@
     </div>
 
     -->
-    <h2><span data-lang="en">Gameplay — Sector 1</span><span data-lang="fr">Gameplay — Secteur 1</span></h2>
-    <p class="muted"><span data-lang="en">In-game capture of the first sector.</span><span data-lang="fr">Capture en jeu du premier secteur.</span>
-      <a href="https://youtu.be/wbx5i_vA20w" target="_blank" rel="noopener"><span data-lang="en">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span></a></p>
-    <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/wbx5i_vA20w" title="Swarm from Hypervoid 88 — Sector 1 gameplay"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+    <h2><span data-lang="en">Gameplay</span><span data-lang="fr">Gameplay</span></h2>
+    <p class="muted"><span data-lang="en">In-game captures.</span><span data-lang="fr">Captures en jeu.</span>
+      <a id="vlink" href="https://youtu.be/wbx5i_vA20w" target="_blank" rel="noopener"><span data-lang="en">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span></a></p>
+    <div class="vcar">
+      <button class="varrow prev" aria-label="Previous video">&#8249;</button>
+      <div class="yt"><iframe id="vframe" src="https://www.youtube-nocookie.com/embed/wbx5i_vA20w" title="Swarm from Hypervoid 88 — gameplay"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+      <button class="varrow next" aria-label="Next video">&#8250;</button>
+    </div>
+    <div class="vthumbs">
+      <button class="vthumb on" data-id="wbx5i_vA20w" aria-label="Sector 1">
+        <img src="https://i.ytimg.com/vi/wbx5i_vA20w/hqdefault.jpg" alt="" loading="lazy">
+        <span><span data-lang="en">Sector 1</span><span data-lang="fr">Secteur 1</span></span></button>
+      <button class="vthumb" data-id="49B8jidbpgM" aria-label="Sector 3 — a run that goes wrong">
+        <img src="https://i.ytimg.com/vi/49B8jidbpgM/hqdefault.jpg" alt="" loading="lazy">
+        <span><span data-lang="en">Sector 3 — a run that goes wrong</span><span data-lang="fr">Secteur 3 — une partie qui tourne mal</span></span></button>
+      <button class="vthumb" data-id="eG5ylEqc5gE" aria-label="Sector 3 — cleared with Kaida">
+        <img src="https://i.ytimg.com/vi/eG5ylEqc5gE/hqdefault.jpg" alt="" loading="lazy">
+        <span><span data-lang="en">Sector 3 — cleared with Kaida</span><span data-lang="fr">Secteur 3 — réussi avec Kaida</span></span></button>
+    </div>
+    <script>
+    (function () {
+      var thumbs = Array.prototype.slice.call(document.querySelectorAll('.vthumb'));
+      var frame = document.getElementById('vframe'), link = document.getElementById('vlink'), cur = 0;
+      function show(i, play) {
+        cur = (i + thumbs.length) % thumbs.length;
+        var id = thumbs[cur].getAttribute('data-id');
+        frame.src = 'https://www.youtube-nocookie.com/embed/' + id + (play ? '?autoplay=1' : '');
+        link.href = 'https://youtu.be/' + id;
+        thumbs.forEach(function (t, k) { t.classList.toggle('on', k === cur); });
+      }
+      thumbs.forEach(function (t, k) { t.addEventListener('click', function () { show(k, true); }); });
+      document.querySelector('.varrow.prev').addEventListener('click', function () { show(cur - 1, false); });
+      document.querySelector('.varrow.next').addEventListener('click', function () { show(cur + 1, false); });
+    })();
+    </script>
 
     <h2 style="margin-top:40px"><span data-lang="en">Key art</span><span data-lang="fr">Illustrations</span></h2>
     <div class="gallery">
