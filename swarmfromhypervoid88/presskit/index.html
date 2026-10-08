@@ -135,6 +135,9 @@
   .tbd { color: var(--tbd); font-weight: 700; }
   .video { border: 2px dashed var(--tbd); border-radius: 12px; aspect-ratio: 16 / 9; display: flex;
     align-items: center; justify-content: center; color: var(--tbd); font-weight: 700; }
+  .yt { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--line); box-shadow: 0 0 30px rgba(255, 78, 205, .18); background: #000; }
+  .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 15px; border-top: 1px solid rgba(255, 255, 255, .06); }
 
   /* language switch: [data-lang] blocks */
@@ -282,12 +285,15 @@
       <div class="slot">[TBD] Pilot / ship select</div>
     </div>
 
-    <h2 style="margin-top:40px"><span data-lang="en">Trailer</span><span data-lang="fr">Bande-annonce</span></h2>
-    <!- - TODO(trailer): replace with a YouTube embed or a <video> - ->
-    <div class="video">[TBD] <span data-lang="en">&nbsp;trailer / gameplay video</span><span data-lang="fr">&nbsp;trailer / vidéo de gameplay</span></div>
-
     -->
-    <h2><span data-lang="en">Key art</span><span data-lang="fr">Illustrations</span></h2>
+    <h2><span data-lang="en">Gameplay — Sector 1</span><span data-lang="fr">Gameplay — Secteur 1</span></h2>
+    <p class="muted"><span data-lang="en">In-game capture of the first sector.</span><span data-lang="fr">Capture en jeu du premier secteur.</span>
+      <a href="https://youtu.be/wbx5i_vA20w" target="_blank" rel="noopener"><span data-lang="en">Watch on YouTube</span><span data-lang="fr">Voir sur YouTube</span></a></p>
+    <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/wbx5i_vA20w" title="Swarm from Hypervoid 88 — Sector 1 gameplay"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+
+    <h2 style="margin-top:40px"><span data-lang="en">Key art</span><span data-lang="fr">Illustrations</span></h2>
     <div class="gallery">
       <a href="images/key-art-feature.jpg"><img src="images/key-art-feature.jpg" alt="Key art"></a>
       <a href="images/key-art.jpg"><img src="images/key-art.jpg" alt="Key art — ship and crystal armada"></a>
