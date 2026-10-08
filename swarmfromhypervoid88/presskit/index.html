@@ -107,15 +107,25 @@
   .card h3 { font-size: 15px; }
   .card p { font-size: 15px; color: var(--muted); margin: 0; line-height: 1.35; }
 
-  .pilots { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
-  .pilot { display: flex; gap: 16px; align-items: stretch; background: var(--panel);
-    border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
-  .pilot .pic { flex: 0 0 110px; display: flex; align-items: flex-end; justify-content: center; }
-  .pilot .pic img { max-height: 250px; width: auto; filter: drop-shadow(0 0 10px rgba(255, 78, 205, .25)); }
-  .pilot h3 { font-size: 16px; margin-bottom: 2px; }
-  .pilot .role { color: var(--gold); font-weight: 700; font-size: 14px; letter-spacing: .04em; margin-bottom: 8px; }
-  .pilot p { font-size: 16px; line-height: 1.45; color: var(--text); margin: 0; }
-  @media (max-width: 420px) { .pilot { flex-direction: column; align-items: center; text-align: center; } .pilot .pic img { max-height: 200px; } }
+  .pilots { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .pilot { display: flex; flex-direction: column; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .pilot .pic { height: 400px; display: flex; align-items: flex-end; justify-content: center; padding-top: 18px;
+    background: radial-gradient(70% 60% at 50% 70%, rgba(255, 78, 205, .22), transparent 70%),
+                linear-gradient(180deg, rgba(69, 243, 255, .06), transparent 60%); border-bottom: 1px solid var(--line); }
+  .pilot .pic img { max-height: 100%; width: auto; filter: drop-shadow(0 0 14px rgba(255, 78, 205, .35)); }
+  .pilot .info { padding: 14px 18px 18px; text-align: center; }
+  .pilot h3 { font-size: 18px; margin: 0 0 2px; }
+  .pilot .role { color: var(--gold); font-weight: 700; font-size: 14px; letter-spacing: .04em; margin-bottom: 6px; }
+  .pilot .hook { font-size: 17px; line-height: 1.35; color: var(--cyan); margin: 0 0 10px; }
+  .pilot details { text-align: left; }
+  .pilot summary { cursor: pointer; color: var(--pink); font-weight: 700; font-size: 14px; letter-spacing: .06em;
+    text-transform: uppercase; text-align: center; list-style: none; }
+  .pilot summary::-webkit-details-marker { display: none; }
+  .pilot summary::after { content: " +"; }
+  .pilot details[open] summary::after { content: " \2212"; }
+  .pilot details p { font-size: 16px; line-height: 1.45; color: var(--text); margin: 10px 0 0; }
+  @media (max-width: 420px) { .pilot .pic { height: 340px; } }
   .logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
   .logos a { display: flex; align-items: center; justify-content: center; height: 180px; padding: 16px;
     border-radius: 12px; border: 1px solid var(--line); background: #120628; }
@@ -296,35 +306,47 @@
     <p class="muted"><span data-lang="en">The aces of the 47th Wave-Breaker Squadron, Yokohama Orbital Docks.</span><span data-lang="fr">Les as du 47e Escadron Wave-Breaker, docks orbitaux de Yokohama.</span></p>
     <div class="pilots">
       <div class="pilot"><div class="pic"><img src="images/pilot-rei.png" alt="REI · STARLING"></div>
-        <div><h3>REI · STARLING</h3>
+        <div class="info"><h3>REI · STARLING</h3>
         <div class="role"><span data-lang="en">Lead pilot</span><span data-lang="fr">Pilote principale</span></div>
+        <p class="hook" data-lang="en">The model cadet who never quits.</p><p class="hook" data-lang="fr">L’élève modèle qui n’abandonne jamais.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">A drift-colony kid with no connections — just a will nobody has ever bent. First into the simulator at dawn, last out at night, she failed the academy's evasion trial forty-one times and passed the forty-second with the best score ever logged. Top of her class at nineteen, the model cadet every instructor now cites. She gives everything, every sortie. She has never once quit.</p>
-        <p data-lang="fr">Une gamine des colonies dérivantes, sans relations — seulement une volonté que personne n'a jamais su plier. Première au simulateur à l'aube, dernière à en sortir le soir, elle a raté quarante et une fois l'épreuve d'évasion de l'académie avant de la réussir à la quarante-deuxième avec le meilleur score jamais enregistré. Major de sa promotion à dix-neuf ans, l'élève modèle que tous les instructeurs citent. Elle donne tout, à chaque sortie. Elle n'a jamais abandonné.</p></div></div>
+        <p data-lang="fr">Une gamine des colonies dérivantes, sans relations — seulement une volonté que personne n'a jamais su plier. Première au simulateur à l'aube, dernière à en sortir le soir, elle a raté quarante et une fois l'épreuve d'évasion de l'académie avant de la réussir à la quarante-deuxième avec le meilleur score jamais enregistré. Major de sa promotion à dix-neuf ans, l'élève modèle que tous les instructeurs citent. Elle donne tout, à chaque sortie. Elle n'a jamais abandonné.</p></details></div></div>
       <div class="pilot"><div class="pic"><img src="images/pilot-jun.png" alt="JUN · STARLING-TWO"></div>
-        <div><h3>JUN · STARLING-TWO</h3>
+        <div class="info"><h3>JUN · STARLING-TWO</h3>
         <div class="role"><span data-lang="en">Prodigy &amp; wingmate</span><span data-lang="fr">Prodige et ailière</span></div>
+        <p class="hook" data-lang="en">The prodigy who never had to try.</p><p class="hook" data-lang="fr">La prodige qui n’a jamais eu à forcer.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">The prodigy. Born into a family of test pilots on the Yokohama docks, she flew cargo shuttles at nine and outflew her instructors at twelve. At eighteen she tested at a 98.6% neural sync and tamed the prototype Void-Runner on her first try — then pulled its governor off. Everything comes easily to Jun. Rei, who earned every hour Jun got for free, calls her <em>imouto</em> and keeps her alive.</p>
-        <p data-lang="fr">L'enfant prodige. Née dans une famille de pilotes d'essai sur les docks de Yokohama, elle pilotait des navettes cargo à neuf ans et surpassait ses instructeurs à douze. À dix-huit ans, elle affiche une synchronisation neurale de 98,6 % et dompte le prototype Void-Runner du premier coup — avant d'en retirer le bridage. Tout est facile pour Jun. Rei, qui a gagné chaque heure que Jun a eue gratuitement, l'appelle <em>imouto</em> et la garde en vie.</p></div></div>
+        <p data-lang="fr">L'enfant prodige. Née dans une famille de pilotes d'essai sur les docks de Yokohama, elle pilotait des navettes cargo à neuf ans et surpassait ses instructeurs à douze. À dix-huit ans, elle affiche une synchronisation neurale de 98,6 % et dompte le prototype Void-Runner du premier coup — avant d'en retirer le bridage. Tout est facile pour Jun. Rei, qui a gagné chaque heure que Jun a eue gratuitement, l'appelle <em>imouto</em> et la garde en vie.</p></details></div></div>
       <div class="pilot"><div class="pic"><img src="images/pilot-vega.png" alt="VEGA · GOLD-FANG"></div>
-        <div><h3>VEGA · GOLD-FANG</h3>
+        <div class="info"><h3>VEGA · GOLD-FANG</h3>
         <div class="role"><span data-lang="en">Smuggler &amp; old wingman</span><span data-lang="fr">Contrebandier et ancien ailier</span></div>
+        <p class="hook" data-lang="en">Says he’s in it for the money. Nobody believes him.</p><p class="hook" data-lang="fr">Dit qu’il est là pour l’argent. Personne ne le croit.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">He flew the first strike into the void as Kaida's wingman — they were the only two who came home. She stayed; he walked out and became the fastest smuggler on the freeport lanes. Now he flies beside the 47th "for the money", paid per kill, in advance. Nobody believes him: his invoices go unpaid, his fees end up in colony orphanages, and he always shows up exactly when Rei needs him. He salutes no one but Kaida.</p>
-        <p data-lang="fr">Il a volé lors de la première frappe dans le vide comme ailier de Kaida — ils sont les deux seuls à en être revenus. Elle est restée ; lui est parti devenir le contrebandier le plus rapide des ports francs. Aujourd'hui, il vole aux côtés du 47e « pour l'argent », payé à la cible, d'avance. Personne ne le croit : ses factures restent impayées, ses gains finissent dans les orphelinats des colonies, et il arrive toujours pile quand Rei a besoin de lui. Il ne salue personne, sauf Kaida.</p></div></div>
+        <p data-lang="fr">Il a volé lors de la première frappe dans le vide comme ailier de Kaida — ils sont les deux seuls à en être revenus. Elle est restée ; lui est parti devenir le contrebandier le plus rapide des ports francs. Aujourd'hui, il vole aux côtés du 47e « pour l'argent », payé à la cible, d'avance. Personne ne le croit : ses factures restent impayées, ses gains finissent dans les orphelinats des colonies, et il arrive toujours pile quand Rei a besoin de lui. Il ne salue personne, sauf Kaida.</p></details></div></div>
       <div class="pilot"><div class="pic"><img src="images/pilot-hayato.png" alt="HAYATO · KESTREL"></div>
-        <div><h3>HAYATO · KESTREL</h3>
+        <div class="info"><h3>HAYATO · KESTREL</h3>
         <div class="role"><span data-lang="en">Senior wingman</span><span data-lang="fr">Ailier vétéran</span></div>
+        <p class="hook" data-lang="en">One breath, one cut, one bullet.</p><p class="hook" data-lang="fr">Un souffle, une coupe, une balle.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">Last son of a Kyoto kenjutsu bloodline, he says the blade and the cockpit are the same discipline: one breath, one cut, one bullet. Three hundred sorties and he has never lost a wingmate — a blessing to the squad, a debt unpaid to him. He bows to his ship before every launch.</p>
-        <p data-lang="fr">Dernier fils d'une lignée de kenjutsu de Kyoto, il dit que le sabre et le cockpit sont une seule discipline : un souffle, une coupe, une balle. Trois cents sorties sans jamais perdre un ailier — une bénédiction pour l'escadron, une dette impayée pour lui. Il salue son vaisseau avant chaque décollage.</p></div></div>
+        <p data-lang="fr">Dernier fils d'une lignée de kenjutsu de Kyoto, il dit que le sabre et le cockpit sont une seule discipline : un souffle, une coupe, une balle. Trois cents sorties sans jamais perdre un ailier — une bénédiction pour l'escadron, une dette impayée pour lui. Il salue son vaisseau avant chaque décollage.</p></details></div></div>
       <div class="pilot"><div class="pic"><img src="images/pilot-kaida.png" alt="KAIDA · IRON ORCHID"></div>
-        <div><h3>KAIDA · IRON ORCHID</h3>
+        <div class="info"><h3>KAIDA · IRON ORCHID</h3>
         <div class="role"><span data-lang="en">Commander, 47th Squadron</span><span data-lang="fr">Commandante du 47e</span></div>
+        <p class="hook" data-lang="en">Every ace of the 47th would follow her into the void.</p><p class="hook" data-lang="fr">Chaque as du 47e la suivrait dans le vide.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">Flew the first strike into the void at twenty-three and came home with a scar above her eye and a squadron of empty cockpits. When they tried to ground her, she became the one who sends others. She knows every pilot's name — and the way every pilot dies. Nobody questions her: pilots straighten up when she enters the hangar, Command has learned her "no" is final, and every ace of the 47th would follow her into the void.</p>
-        <p data-lang="fr">A volé lors de la première frappe dans le vide à vingt-trois ans et en est revenue avec une cicatrice au-dessus de l'œil et un escadron de cockpits vides. Quand on a voulu la clouer au sol, elle est devenue celle qui envoie les autres. Elle connaît le nom de chaque pilote — et la façon dont chacun meurt. Personne ne la conteste : les pilotes se redressent quand elle entre dans le hangar, le commandement a appris que son « non » est définitif, et chaque as du 47e la suivrait dans le vide.</p></div></div>
+        <p data-lang="fr">A volé lors de la première frappe dans le vide à vingt-trois ans et en est revenue avec une cicatrice au-dessus de l'œil et un escadron de cockpits vides. Quand on a voulu la clouer au sol, elle est devenue celle qui envoie les autres. Elle connaît le nom de chaque pilote — et la façon dont chacun meurt. Personne ne la conteste : les pilotes se redressent quand elle entre dans le hangar, le commandement a appris que son « non » est définitif, et chaque as du 47e la suivrait dans le vide.</p></details></div></div>
       <div class="pilot"><div class="pic"><img src="images/pilot-null.png" alt="NULL"></div>
-        <div><h3>NULL</h3>
+        <div class="info"><h3>NULL</h3>
         <div class="role"><span data-lang="en">Voidforged pilot</span><span data-lang="fr">Pilote forgé dans le vide</span></div>
+        <p class="hook" data-lang="en">The swarm parts around him.</p><p class="hook" data-lang="fr">L’essaim s’écarte devant lui.</p>
+        <details><summary><span data-lang="en">Origin story</span><span data-lang="fr">Son histoire</span></summary>
         <p data-lang="en">Pulled from the wreck of a Phantom-tier boss and rebuilt by the squadron's engineer. He says he remembers being many. The swarm has never fired at him directly — it parts around him like water around a stone, and the longer the 47th flies with him, the less anyone wants to ask why.</p>
-        <p data-lang="fr">Extrait de l'épave d'un boss de classe Phantom et reconstruit par l'ingénieur de l'escadron. Il dit se souvenir d'avoir été plusieurs. L'essaim ne lui a jamais tiré dessus directement — il s'écarte autour de lui comme l'eau autour d'une pierre, et plus le 47e vole avec lui, moins on a envie de demander pourquoi.</p></div></div>
+        <p data-lang="fr">Extrait de l'épave d'un boss de classe Phantom et reconstruit par l'ingénieur de l'escadron. Il dit se souvenir d'avoir été plusieurs. L'essaim ne lui a jamais tiré dessus directement — il s'écarte autour de lui comme l'eau autour d'une pierre, et plus le 47e vole avec lui, moins on a envie de demander pourquoi.</p></details></div></div>
     </div>
   </section>
 
