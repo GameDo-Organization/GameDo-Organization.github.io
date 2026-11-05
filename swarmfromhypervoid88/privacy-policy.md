@@ -6,7 +6,7 @@ title: Privacy Policy - Swarm from Hypervoid 88
 # Privacy Policy for Swarm from Hypervoid 88
 
 **Effective Date:** May 25, 2026
-**Last Updated:** May 25, 2026
+**Last Updated:** November 5, 2026
 
 GameDo Studio ("we", "our", "us") built Swarm from Hypervoid 88 as a free, ad-supported game. This page informs you of our policies regarding the collection, use, and disclosure of information when you use our app.
 
@@ -14,7 +14,7 @@ GameDo Studio ("we", "our", "us") built Swarm from Hypervoid 88 as a free, ad-su
 
 ### Information We Do NOT Collect
 
-Swarm from Hypervoid 88 does **not** collect, store, or transmit any personal information. We do not require account creation, login, or registration. All game progress (run history, unlocked pilots and ships, claimed rewards, leaderboard entries, settings) is stored **locally on your device only** and is never sent to any server.
+Swarm from Hypervoid 88 does **not** collect, store, or transmit any personal information. We do not require account creation, login, or registration. All game progress (run history, unlocked pilots and ships, claimed rewards, local leaderboard entries, settings) is stored **locally on your device**. The only exception is optional: if you are signed in to Google Play Games, your scores and achievements are sent to Google (see below).
 
 ### Information Collected by Third-Party Services
 
@@ -25,7 +25,16 @@ Swarm from Hypervoid 88 uses **Google AdMob** to display rewarded video advertis
 - IP address (used for approximate location, not stored precisely)
 - Ad interaction data (views, clicks)
 
-This data is collected and processed by Google in accordance with [Google's Privacy Policy](https://policies.google.com/privacy).
+This data is collected and processed by Google in accordance with [Google's Privacy Policy](https://policies.google.com/privacy). Where required (for example in the European Economic Area and the United Kingdom), the game asks for your consent before personalized ads are shown, using Google's consent tool. 
+
+### Google Play Games Services (optional)
+
+On Android, Swarm from Hypervoid 88 uses **Google Play Games Services** for online leaderboards and achievements. When you are signed in, your Play Games gamer name is used for your leaderboard entries instead of your local pilot nickname. Play Games may sign you in automatically when the game starts; you can also decline or sign out. When you are signed in, Google receives and processes:
+
+- Your Play Games profile (player ID, gamer name and avatar)
+- The scores and achievements you send from the game, which other players may see according to your Play Games profile visibility settings
+
+GameDo Studio does not receive your Google account details. This data is processed by Google in accordance with [Google's Privacy Policy](https://policies.google.com/privacy) and the [Google Play Games Services terms](https://developers.google.com/games/services/terms).
 
 ## How Ads Work in Swarm from Hypervoid 88
 
@@ -44,7 +53,7 @@ All game data is stored locally on your device using Godot Engine's built-in fil
 - Audio, haptics, and display settings
 - An anonymous device identifier used only to tag your own local leaderboard entries
 
-This data is never transmitted off your device. Uninstalling the app will delete all saved data.
+This data is never transmitted off your device, except your scores and achievements when you are signed in to Google Play Games. Uninstalling the app will delete all saved data.
 
 ## Children's Privacy
 
@@ -57,6 +66,7 @@ If you are a parent or guardian and believe your child has been exposed to inapp
 - **Ad tracking:** You can opt out of personalized advertising by adjusting your device settings:
   - **iOS:** Settings > Privacy & Security > Tracking
   - **Android:** Settings > Google > Ads > Opt out of Ads Personalization
+- **Google Play Games:** You can sign out, change your profile visibility, or delete your Play Games data from the Google Play Games settings on your device or at [play.google.com/games](https://play.google.com/games).
 - **Delete data:** You can delete all game data either by tapping "Reset Progress" in the in-game Settings screen, or by uninstalling the app.
 
 ## Changes to This Policy
