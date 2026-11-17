@@ -11,6 +11,7 @@ title: GameDo Studio
 - **Swarm from Hypervoid 88** — A neon arcade bullet-hell for iOS and Android · [Press kit](swarmfromhypervoid88/presskit/)
 - **Dip'Dee Survival** — A pixel-art survival shooter in an alien cave for iOS and Android
 - **Quadrille** — A cozy block-puzzle garden adventure for Android
+- **Petal Drop** — A flower-garden pachinko roguelite for Android, coming soon
 
 ## Legal
 
@@ -18,3 +19,4 @@ title: GameDo Studio
 - [Privacy Policy — Swarm from Hypervoid 88](swarmfromhypervoid88/privacy-policy)
 - [Privacy Policy — Dip'Dee Survival](dipdeesurvival/privacy-policy)
 - [Privacy Policy — Quadrille](quadrille/privacy-policy)
+- [Privacy Policy — Petal Drop](petaldrop/privacy-policy)
