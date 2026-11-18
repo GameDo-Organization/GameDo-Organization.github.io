@@ -6,15 +6,15 @@ title: Privacy Policy - Petal Drop
 # Privacy Policy for Petal Drop
 
 **Effective Date:** November 17, 2026
-**Last Updated:** November 17, 2026
+**Last Updated:** November 18, 2026
 
-GameDo Studio ("we", "our", "us") built Petal Drop as a free, ad-supported game with optional in-app purchases. This page informs you of our policies regarding the collection, use, and disclosure of information when you use our app.
+GameDo Studio ("we", "our", "us") built Petal Drop as a free, ad-supported game. It has no in-app purchases. This page informs you of our policies regarding the collection, use, and disclosure of information when you use our app.
 
 ## Information We Collect
 
 ### Information We Do NOT Collect
 
-Petal Drop does **not** collect, store, or transmit any personal information to us. We do not require account creation, login, or registration. All game progress is stored **locally on your device**. The only exceptions go to Google: optional Google Play Games features (see below) and purchases, which are handled by Google Play.
+Petal Drop does **not** collect, store, or transmit any personal information to us. We do not require account creation, login, or registration. All game progress is stored **locally on your device**. The only exception goes to Google: optional Google Play Games features (see below).
 
 ### Information Collected by Third-Party Services
 
@@ -36,15 +36,10 @@ On Android, Petal Drop uses **Google Play Games Services** for achievements (the
 
 GameDo Studio does not receive your Google account details. This data is processed by Google in accordance with [Google's Privacy Policy](https://policies.google.com/privacy) and the [Google Play Games Services terms](https://developers.google.com/games/services/terms).
 
-### In-App Purchases (optional)
-
-Petal Drop offers optional purchases (remove ads, a starter pack, petal bags). Payments are processed entirely by **Google Play Billing**. GameDo Studio never receives your payment details (card number, billing address). The game only receives from Google Play which products you own, so that they can be delivered and restored when you reinstall the game. Purchases are subject to the [Google Play Terms of Service](https://play.google.com/about/play-terms/) and [Google's Privacy Policy](https://policies.google.com/privacy).
-
 ## How Ads Work in Petal Drop
 
 - **Rewarded ads:** you may choose to watch a short video to receive a reward (a second chance, new charms, doubled petals, a second daily gift). This is always optional.
 - **Interstitial ads:** never during a run and never in your first minutes of play; at most one after every three finished runs, and none if you just watched a rewarded ad.
-- **Remove ads:** the "No ads" purchase removes interstitial ads and gives rewards without watching a video.
 
 ## Data Storage
 
@@ -54,10 +49,9 @@ All game data is stored locally on your device using Godot Engine's built-in fil
 - Charms, seeds, themes, trails and flowers unlocked, herbarium and trophies
 - Daily challenge, daily gift, quests and day streak
 - A run in progress, so it can resume where you left it
-- Products owned (no ads, starter pack)
 - Sound, music, vibration and language settings
 
-This data is never transmitted off your device, except the scores and achievements sent to Google Play Games when you are signed in. Uninstalling the app will delete all saved data (purchases of "No ads" and the starter pack are restored by Google Play).
+This data is never transmitted off your device, except the scores and achievements sent to Google Play Games when you are signed in. Uninstalling the app will delete all saved data.
 
 ## Children's Privacy
 
